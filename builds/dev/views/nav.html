@@ -1,0 +1,17 @@
+<div class="table">
+    <ul>
+        <li class="branding"><a href="#/home">TODO App</a></li>
+        <li><a ng-href="#/meetings" ng-show="currentUser">Meetings</a></li>
+        <li><a ng-href="#/login"  ng-hide="currentUser">Login</a></li>
+        <li><a ng-href="#/register" ng-hide="currentUser">Register</a></li>
+        <li ng-show="currentUser">
+   			<a href="#" ng-click="logout()" >Logout</a>
+		</li>
+
+    </ul>
+    <ul class="right">
+      
+        <li><a href="" > {{currentUser.firstname}}</a>
+
+    </ul>
+</div>
