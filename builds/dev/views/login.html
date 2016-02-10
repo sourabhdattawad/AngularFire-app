@@ -1,10 +1,13 @@
-<section>
-    <div class="row">
-        <div class="">
-            <div class="card-panel white">
-                <form name="myform" novalidate>
+<section >
+    <div class="center-align"> 
+       <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel white center-align">
+                        <form name="myform" >
+                                    <h3>Login</h3>
+
                     <div class="input-field ">
-                        <input type="text" name="email" ng-model="user.email" ng-required="true">
+                        <input type="email" name="email" ng-model="user.email" ng-required="true" class="validate">
                         <label for="email">Email</label>
                     </div>
                     <!-- <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched"> Must be a valid email</p> -->
@@ -16,7 +19,11 @@
                     <button type="submit" class="btn" ng-disabled="myform.$invalid" ng-click="login()">Login</button>
                     <p>{{loginError}}</p>
                 </form>
-            </div>
+
         </div>
+      </div>
     </div>
+    </div>
+
+    
 </section>

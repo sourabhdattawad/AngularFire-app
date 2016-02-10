@@ -17,14 +17,26 @@ myApp.controller('RegistrationController', ['$scope', "$firebaseAuth", '$locatio
         }
 
         $scope.register = function() {
-           Authentication.register($scope.user).then(function(){
-            Authentication.login($scope.user).then(function(){
+           Authentication.register($scope.user)
+           .catch(function(error) {
+              //  console.error("Authentication failed:", error);
+                $scope.regError = "This Email is already taken.";
+            }).then(function(){
+                 Authentication.login($scope.user).then(function(authData) {
+
                 $location.path('/meetings');
+
+                console.log("Logged in as:", authData.uid);
+            }).catch(function(error) {
+                console.error("Authentication failed:", error);
+                $scope.loginError = 'Username or password didn\'t match';
             });
-           });
 
 
-        }
+            });
+           }
 
+
+       
     }
 ]);
