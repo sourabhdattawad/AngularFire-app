@@ -2,9 +2,23 @@
 	background-color:#bbdefb ;
 }
 .nav{
-	background-color:#00bfa5;
+	background-color:#616161 ;
 }
   html {
 		font-family: 'Open Sans', sans-serif; 
  }
- 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+body{
+
+	background-image: url('../images/timthumb.jpg')
+}
+h2 {
+	color:white;
+}
+
+.home{
+	color:white;
+}
